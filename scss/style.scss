@@ -1,0 +1,40 @@
+@import "_vars.scss";
+@import "_fonts.scss";
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3,
+h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    background-color: $mbg;
+}
+
+@media (min-width: 768px) {
+    body{
+        min-width: 768px;
+    }
+}
+
+
+@import "common.blocks/header/header";
+@import "common.blocks/chapter/chapter";
+@import "common.blocks/menu/menu";
+@import "common.blocks/description/description";
+@import "common.blocks/read-more/read-more";
+@import "common.blocks/promo-img/promo-img";

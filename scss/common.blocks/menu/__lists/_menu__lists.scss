@@ -1,0 +1,116 @@
+.menu {
+
+    &__lists {
+        display: flex;
+        white-space: nowrap;
+        font-family: "TT Lakes";
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 24px;
+    }
+
+    &__lists a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        color: $textm;
+    }
+
+    &__item-brands {
+        display: none;
+    }
+
+    &__item-additional-services {
+        position: relative;
+        box-sizing: border-box;
+        margin: 0px 20px 0px 0px;
+    }
+
+    &__item-additional-services::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 10px; 
+        height: 100%;
+        width: 167px;
+        background-image: linear-gradient(to right, rgba(248, 248, 248, 0.705), white);
+    }
+
+    // &__link-additional-services {
+    //     padding: 8px 16px;
+    //     color: $textm;
+    // }
+
+    &__item-devices {
+        box-sizing: border-box;
+    }
+
+    .menu__item-devices--hover {
+        border: 2px solid $active;
+        border-radius: 6px;
+        background: $header;
+    }
+
+    // .menu__link-repairable-devices {
+    //     padding: 8px 16px;
+    //     color: $textm;
+    // }
+
+    &__item-price {
+        display: none;
+    }
+
+    &__item-contact {
+        display: none;
+    }
+
+    &__item-special-price {
+        display: none;
+    }
+
+    &__item-reviews {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu {
+
+        &__item-additional-services {
+            margin: 0;
+        }
+
+        &__item-additional-services::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 10px; 
+            height: 100%;
+            width: 167px;
+            background-image: linear-gradient(to right, rgba(248, 248, 248, 0.705), white);
+            display: none;
+        }
+        
+        &__item-price {
+            display: block;
+        }
+    
+        &__item-special-price {
+            display: block;
+            position: relative;
+        }
+
+        &__item-special-price::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 10px; 
+            height: 100%;
+            width: 46px;
+            background-image: linear-gradient(to right, rgba(248, 248, 248, 0.705), white);
+        }
+    }
+}

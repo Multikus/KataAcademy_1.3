@@ -1,0 +1,22 @@
+.promo-img {
+    min-height: 176px;
+}
+.promo-img--bground-img {
+    background-image: url('../../../img/bgImg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 35px;
+}
+
+@media (min-width: 768px) {
+    .promo-img {
+        min-height: 259px;
+        min-width: 360px;
+    }
+    .promo-img--bground-img {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+}

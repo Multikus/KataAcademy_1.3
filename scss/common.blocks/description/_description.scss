@@ -1,0 +1,36 @@
+.description {
+
+    &__text-about {
+        font-family: "TT Lakes";
+
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: $title;
+        max-height: 90px;
+        margin-top: 24px;
+        overflow-y: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .description {
+        display: flex;
+        
+        &__text-about {
+            display: inline-block;
+            width: 312px;
+            margin-top: 0;
+            margin-right: 48px;
+            line-height: 20px;
+            font-weight: 400;
+            max-height: 160px;
+            letter-spacing: 0.2px;
+        }
+    }
+}
+
+.container--padding {
+    padding-top: 40px;
+    padding-right: 0;
+}
