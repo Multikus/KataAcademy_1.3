@@ -4,5 +4,11 @@
     overflow-x: hidden
 }
 
+@media (min-width: 1120px) {
+    .container {
+        padding-left: 32px;
+    }
+}
+
 
 @import "__lists/menu__lists";

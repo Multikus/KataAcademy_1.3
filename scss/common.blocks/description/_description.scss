@@ -34,3 +34,11 @@
     padding-top: 40px;
     padding-right: 0;
 }
+
+@media (min-width: 1120px) {
+    .description {
+        &__text-about {
+            width: 490px;
+        }
+    }
+}

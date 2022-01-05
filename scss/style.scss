@@ -31,6 +31,17 @@ body {
     }
 }
 
+@media (min-width: 1120px) {
+    body{
+        min-width: 768px;
+    }
+
+    .main {
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+}
+
 
 @import "common.blocks/header/header";
 @import "common.blocks/chapter/chapter";
