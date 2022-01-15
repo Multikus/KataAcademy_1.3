@@ -7,6 +7,11 @@
         align-items: center;
     }
 
+    &__btn {
+        border: none;
+        background: none;
+    }
+
     &__logo {
         position: relative;
     }
@@ -124,3 +129,24 @@
         display: none;
     }
 }
+
+
+// .header {
+
+//     &__container {
+//     }
+
+//     &__menu {
+//     }
+
+//     &__burger {
+//     }
+
+//     &__burger--delimiter {
+//     }
+
+//     &__btn {
+//     }
+// }
+// .header--shadow {
+// }
