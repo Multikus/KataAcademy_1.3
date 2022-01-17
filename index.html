@@ -15,7 +15,7 @@
         <div class="header__container">
             <ul class="header__menu">
                 <li class="header__burger  header__burger--delimiter">
-                    <button class="header__btn">
+                    <button class="header__btn button-default">
                         <img class="header__burger-icon" src="./img/svg/burger.svg" width="40" height="40"
                             alt="Кнопка открытия меню">
                     </button>
@@ -25,37 +25,128 @@
                         alt="Картинка с логотипом компании">
                 </li>
                 <li class="header__phone">
-                    <button class="header__btn">
+                    <button class="header__btn button-default">
                         <img class="header__phone-icon" src="./img/svg/call.svg" width="40" height="40"
                             alt="Кнопка заказа обратного звонка">
                     </button>
                 </li>
                 <li class="header__chat">
-                    <button class="header__btn">
+                    <button class="header__btn button-default">
                         <img class="header__chat-icon" src="./img/svg/chat.svg" width="40" height="40"
                             alt="Кнопка открытия чата с оператором">
                     </button>
                 </li>
                 <li class="header__profile header__profile--delimiter">
-                    <button class="header__btn">
+                    <button class="header__btn button-default">
                         <img class="header__profile-icon" src="./img/svg/profile.svg" width="40" height="40"
                             alt="Переход в личный кабинет клиента">
                     </button>
                 </li>
                 <li class="form-order  header__form-order">
-                    <button class="header__btn">
+                    <button class="header__btn button-default">
                         <img class="header__form-icon" src="./img/svg/repair.svg" width="40" height="40"
                             alt="Форма заявки">
                     </button>
                 </li>
                 <li class="header__check-status">
-                    <button class="header__btn">
+                    <button class="header__btn button-default">
                         <img class="header__check-icon" src="./img/svg/checkstatus.svg" width="40" height="40"
                             alt="Проверить статус заявки">
                     </button>
                 </li>
             </ul>
         </div>
+
+        <div class="overlay overlay--visually-toggle"></div>
+        <div class="mobile-menu mobile-menu--visually-toggle">
+            <div class="mobile-menu__header">
+                <ul class="header__menu mobile-menu__header-list">
+                    <li class="header__burger mobile-menu__header-item">
+                        <button class="header__btn button-default">
+                            <img class="header__burger-icon" src="./img/svg/burger.svg" width="40" height="40"
+                                alt="Кнопка открытия меню">
+                        </button>
+                    </li>
+                    <li class="logo header__logo mobile-menu__header-item">
+                        <img class="header__logo-icon" src="./img/svg/logo.svg" width="97" height="51"
+                            alt="Картинка с логотипом компании">
+                    </li>
+                    <li class="header__check-status mobile-menu__chek-status">
+                        <button class="header__btn button-default">
+                            <img class="header__check-icon" src="./img/svg/checkstatus.svg" width="40" height="40"
+                                alt="Проверить статус заявки">
+                        </button>
+                    </li>
+                </ul>
+                
+                <ul class="menu__lists mobile-menu__list">
+                    <li class="menu__item-brands mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-repairable-brands" href="#">Ремонтируемые бренды</a>
+                    </li>
+                    <li class="menu__item-brands mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-corporate-client" href="#">Корпоративным клиентам</a>
+                    </li>
+                    <li class="menu__item-devices  menu__item-devices--hover mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-repairable-devices" href="#">Ремонтируемые устройства</a>
+                    </li>
+                    <li class="menu__item-additional-services mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-additional-services" href="#">Дополнительные услуги</a>
+                    </li>
+                    <li class="menu__item-price mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-price" href="#">Цены на услуги</a>
+                    </li>
+                    <li class="menu__item-contact mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-contact" href="#">Адреса сервисных центров</a>
+                    </li>
+                    <li class="menu__item-special-price mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-special-price" href="#">Специальные цены</a>
+                    </li>
+                    <li class="menu__item-reviews mobile-menu__item">
+                        <button class="button-default menu__btn"
+                        <a class="menu__link-reviews" href="#">Отзывы</a>
+                    </li>
+                </ul>
+    
+                <ul class="mobile-menu__menu-footer menu-footer">
+                    <li class="menu-footer__item">
+                        <button type="button" class="menu-footer__btn button-default">
+                            <img src="./img/svg/call.svg" alt="Заказать звонок">
+                        </button>
+                        <button type="button" class="menu-footer__btn menu-footer__btn--position button-default">
+                            <img src="./img/svg/chat.svg" alt="Чат с менеджером">
+                        </button>
+                        <button type="button" class="menu-footer__btn button-default">
+                            <img src="./img/svg/profile.svg" alt="Переход в личный кабинет клиента">
+                        </button>
+                    </li>
+                    <li class="menu-footer__item">
+                        <a class='menu-footer__link-mail' href="mailto:mail@cps.com">mail@cps.com</a>
+                    </li>
+                    <li class="menu-footer__item">
+                        <a class='menu-footer__link-phone' href="tel:+88008908900">8 800 890 8900</a>
+                    </li>
+                    <li class="menu-footer__item">
+                        <button type="button" class="menu-footer__lang button-default">
+                            ru
+                        </button>
+                        <button type="button" class="menu-footer__lang button-default">
+                            en
+                        </button>
+                        <button type="button" class="menu-footer__lang button-default">
+                            ch
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </header>
     <main class="main">
         <section class="chapter">
@@ -73,29 +164,35 @@
                 </li>
             </ul>
         </section>
-
         <section class="menu">
             <div class="container">
                 <ul class="menu__lists">
                     <li class="menu__item-brands">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-repairable-brands" href="#">Ремонтируемые бренды</a>
                     </li>
                     <li class="menu__item-devices  menu__item-devices--hover">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-repairable-devices" href="#">Ремонтируемые устройства</a>
                     </li>
                     <li class="menu__item-additional-services">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-additional-services" href="#">Дополнительные услуги</a>
                     </li>
                     <li class="menu__item-price">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-price" href="#">Цены на услуги</a>
                     </li>
                     <li class="menu__item-contact">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-contact" href="#">Адреса сервисных центров</a>
                     </li>
                     <li class="menu__item-special-price">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-special-price" href="#">Специальные цены</a>
                     </li>
                     <li class="menu__item-reviews">
+                        <button class="button-default menu__btn"
                         <a class="menu__link-reviews" href="#">Отзывы</a>
                     </li>
                 </ul>
