@@ -1,5 +1,4 @@
 .description {
-
     &__text-about {
         font-family: "TT Lakes";
         font-size: 14px;
@@ -8,14 +7,27 @@
         color: $title;
         max-height: 90px;
         margin-top: 24px;
-        overflow-y: hidden;
+        overflow: hidden;
     }
+}
+
+.container--location {
+    max-height: 125px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.flex-container {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @media (min-width: 768px) {
     .description {
         display: flex;
-        
+
         &__text-about {
             display: inline-block;
             width: 312px;
@@ -26,12 +38,23 @@
             max-height: 160px;
             letter-spacing: 0.2px;
         }
-    }
-}
 
-.container--padding {
-    padding-top: 40px;
-    padding-right: 0;
+        &__text-about--padding-btm {
+            padding-bottom: 15px;
+        }
+
+        &__button{ 
+            margin-top: 4px;
+            padding: 10px;
+        }
+    }
+
+    .container--location {
+        margin-top: 52px;
+        padding-right: 0;
+        max-height: 160px;
+        overflow: hidden;
+        }
 }
 
 @media (min-width: 1120px) {
@@ -39,5 +62,18 @@
         &__text-about {
             width: 490px;
         }
+
+        &__text-about--padding-btm {
+            padding-bottom: 25px;
+        }
+
+        &__button {
+            margin-top: 13px;
+        }
+    }
+
+    .container--location {
+        padding-right: 0;
+        overflow: visible;
     }
 }

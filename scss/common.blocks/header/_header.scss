@@ -1,15 +1,18 @@
+.button-default {
+    border: none;
+    background: none;
+    display: block;
+}
+
 .header {
     background-color: $header;
+    position: relative;
 
     &__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    &__btn {
-        border: none;
-        background: none;
+        max-width: 320px;
     }
 
     &__logo {
@@ -57,6 +60,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 100%;
         }
 
         &__burger {
@@ -129,24 +133,3 @@
         display: none;
     }
 }
-
-
-// .header {
-
-//     &__container {
-//     }
-
-//     &__menu {
-//     }
-
-//     &__burger {
-//     }
-
-//     &__burger--delimiter {
-//     }
-
-//     &__btn {
-//     }
-// }
-// .header--shadow {
-// }

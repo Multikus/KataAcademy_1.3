@@ -1,26 +1,31 @@
 .read-more {
-    position: relative;
+    display: flex;
     font-family: "TT Lakes";
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: $title;
+    outline-color: $active;
+
     &__arrow {
+        margin-top: 6px;
         margin-right: 13px;
     }
 }
 
 @media (min-width: 768px) {
     .read-more {
-        &__text {
+        &__arrow {
             margin-top: 9px;
         }
     }
 }
 
-
-
-
-
-
+@media (min-width: 1120px) {
+    .read-more {
+        &__arrow {
+            margin-top: 7px;
+        }
+    }
+}
