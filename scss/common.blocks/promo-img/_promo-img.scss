@@ -1,12 +1,14 @@
 .promo-img {
     min-height: 176px;
 }
+
 .promo-img--bground-img {
     background-image: url('../../../img/bgImg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     margin-bottom: 35px;
+    margin-top: 12px;
 }
 
 @media (min-width: 768px) {
@@ -14,8 +16,10 @@
         min-height: 259px;
         min-width: 360px;
     }
+    
     .promo-img--bground-img {
         margin-top: 40px;
+        margin-right: 25px;
         margin-bottom: 40px;
         border-radius: 5px;
     }
@@ -26,9 +30,10 @@
         min-height: 307px;
         min-width: 531px;
     }
+
     .promo-img--bground-img {
-        margin-top: 30px;
         margin-bottom: 40px;
         border-radius: 5px;
+        margin-right: 30px;
     }
 }

@@ -9,6 +9,10 @@ html {
     box-sizing: border-box;
 }
 
+html * {
+    outline-color: $active;
+}
+
 p, h1, h2, h3,
 h4, h5, h6 {
     margin: 0;
@@ -25,23 +29,22 @@ body {
     background-color: $mbg;
 }
 
+.main {
+    max-width: 320px;
+}
+
 @media (min-width: 768px) {
-    body{
+    .main {
         min-width: 768px;
     }
 }
 
 @media (min-width: 1120px) {
-    body{
-        min-width: 768px;
-    }
-
     .main {
         max-width: 1120px;
         margin: 0 auto;
     }
 }
-
 
 @import "common.blocks/header/header";
 @import "common.blocks/chapter/chapter";
