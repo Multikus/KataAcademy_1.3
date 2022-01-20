@@ -8,6 +8,7 @@
     <title>CPS</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="header__container">
             <ul class="header__menu">
                 <li class="header__burger  header__burger--delimiter">
-                    <button class="  button-default">
+                    <button class="header__burger-btn button-default">
                         <img class="header__burger-icon" src="./img/svg/burger.svg" width="40" height="40"
                             alt="Кнопка открытия меню">
                     </button>
@@ -57,60 +58,56 @@
             </ul>
         </div>
 
-        <div class="overlay "></div>
-        <div class="mobile-menu ">
+        <div class="overlay overlay--visually-toggle"></div>
+        <div class="mobile-menu mobile-menu--visually-toggle">
             <div class="mobile-menu__header">
-                <ul class="header__menu mobile-menu__header-list">
-                    <li class="header__burger mobile-menu__header-item">
-                        <button class="  button-default">
-                            <img class="header__burger-icon" src="./img/svg/burger.svg" width="40" height="40"
+
+                <ul class="mobile-menu__header-list">
+                    <li class="mobile-menu__header-item">
+                        <button class="mobile-menu__btn-close mobile-menu--visually-toggle button-default">
+                            <img class="mobile-menu__burger-icon" src="./img/svg/burger.svg" width="40" height="40"
                                 alt="Кнопка открытия меню">
                         </button>
                     </li>
-                    <li class="logo header__logo mobile-menu__header-item">
-                        <img class="header__logo-icon" src="./img/svg/logo.svg" width="97" height="51"
+
+
+                    <li class="logo mobile-menu__header-item">
+                        <img class="mobile-menu__burger-icon" src="./img/svg/logo.svg" width="97" height="51"
                             alt="Картинка с логотипом компании">
                     </li>
-                    <li class="header__check-status mobile-menu__chek-status">
-                        <button class="  button-default">
-                            <img class="header__check-icon" src="./img/svg/checkstatus.svg" width="40" height="40"
+
+                    <li class="mobile-menu__chek-status">
+                        <button class="button-default">
+                            <img class="mobile-menu__burger-icon" src="./img/svg/checkstatus.svg" width="40" height="40"
                                 alt="Проверить статус заявки">
                         </button>
                     </li>
                 </ul>
                 
-                <ul class="menu__lists mobile-menu__list">
-                    <li class="menu__item-brands mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-repairable-brands" href="#">Ремонтируемые бренды</a>
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Ремонтируемые бренды</a>
                     </li>
-                    <li class="menu__item-brands mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-corporate-client" href="#">Корпоративным клиентам</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Корпоративным клиентам</a>
                     </li>
-                    <li class="menu__item-devices  menu__item-devices--hover mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-repairable-devices" href="#">Ремонтируемые устройства</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Ремонтируемые устройства</a>
                     </li>
-                    <li class="menu__item-additional-services mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-additional-services" href="#">Дополнительные услуги</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Дополнительные услуги</a>
                     </li>
-                    <li class="menu__item-price mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-price" href="#">Цены на услуги</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Цены на услуги</a>
                     </li>
-                    <li class="menu__item-contact mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-contact" href="#">Адреса сервисных центров</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Адреса сервисных центров</a>
                     </li>
-                    <li class="menu__item-special-price mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-special-price" href="#">Специальные цены</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Специальные цены</a>
                     </li>
-                    <li class="menu__item-reviews mobile-menu__item">
-                        <button class="button-default menu__btn"
-                        <a class="menu__link-reviews" href="#">Отзывы</a>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="#">Отзывы</a>
                     </li>
                 </ul>
     
@@ -168,25 +165,25 @@
             <div class="container menu__position">
                 <ul class="menu__lists">
                     <li class="menu__item-brands">
-                            <a class="menu__link-repairable-brands menu__link" href="#">Ремонтируемые бренды</a>
+                        <a class="menu__link-repairable-brands menu__link" href="#">Ремонтируемые бренды</a>
                     </li>
-                    <li class="menu__item-devices  menu__item-devices--hover">
-                            <a class="menu__link-repairable-devices menu__link" href="#">Ремонтируемые устройства</a>
+                    <li class="menu__item-devices">
+                        <a class="menu__link-repairable-devices menu__link" href="#">Ремонтируемые устройства</a>
                     </li>
                     <li class="menu__item-additional-services">
-                            <a class="menu__link-additional-services menu__link" href="#">Дополнительные услуги</a>
+                        <a class="menu__link-additional-services menu__link" href="#">Дополнительные услуги</a>
                     </li>
                     <li class="menu__item-price">
-                            <a class="menu__link-price menu__link" href="#">Цены на услуги</a>
+                        <a class="menu__link-price menu__link" href="#">Цены на услуги</a>
                     </li>
                     <li class="menu__item-contact">
-                            <a class="menu__link-contact menu__link" href="#">Адреса сервисных центров</a>
+                        <a class="menu__link-contact menu__link" href="#">Адреса сервисных центров</a>
                     </li>
                     <li class="menu__item-special-price">
-                            <a class="menu__link-special-price menu__link" href="#">Специальные цены</a>
+                        <a class="menu__link-special-price menu__link" href="#">Специальные цены</a>
                     </li>
                     <li class="menu__item-reviews">
-                            <a class="menu__link-reviews menu__link" href="#">Отзывы</a>
+                        <a class="menu__link-reviews menu__link" href="#">Отзывы</a>
                     </li>
                 </ul>
             </div>

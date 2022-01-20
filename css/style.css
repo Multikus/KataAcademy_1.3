@@ -330,15 +330,23 @@ body {
 }
 
 .mobile-menu__header-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
   padding-top: 19px;
   padding-left: 18px;
   padding-right: 24px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .mobile-menu__header-item {
+  position: relative;
   padding-right: 17px;
 }
 
@@ -356,15 +364,52 @@ body {
   background-color: #ffffff;
   padding-left: 24px;
   max-width: 320px;
-  margin-top: 0px;
+  margin-top: 46px;
 }
 
 .mobile-menu__item {
+  position: relative;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding: 8px 16px;
+  padding: 8px 0px;
   color: #7E7E82;
   letter-spacing: -0.2px;
+  margin-bottom: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mobile-menu__item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -23px;
+  width: 4px;
+  height: 32px;
+  background-color: #41F6D7;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.mobile-menu__link {
+  display: block;
+  font-family: TT Lakes;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2;
+  color: #7E7E82;
+  text-decoration: none;
+  outline: none;
+}
+
+.mobile-menu__link:focus::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -23px;
+  width: 4px;
+  height: 32px;
+  background-color: #41F6D7;
+  border-radius: 0px 5px 5px 0px;
 }
 
 .mobile-menu__menu-footer {
@@ -376,6 +421,12 @@ body {
   padding-left: 24px;
   font-family: 'TT Lakes';
   letter-spacing: -0.2px;
+}
+
+.menu-footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu-footer__btn {
@@ -491,6 +542,7 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 8px;
+    padding-left: 3px;
   }
   .menu__link:hover {
     border: 2px solid #B8FFEC;
