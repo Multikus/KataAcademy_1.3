@@ -1,5 +1,5 @@
 .section-name {
-    background-color: $sectionTitleBg;
+    background-image: linear-gradient(270deg, $mbg 0%, $sectionTitleBg 93%);
     box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
 
     &__title {
