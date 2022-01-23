@@ -1,0 +1,32 @@
+.section-name {
+    background-color: $sectionTitleBg;
+    box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
+
+    &__title {
+        text-transform: uppercase;
+        font-family: 'TT Lakes';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $textm;
+        padding: 16px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .section-name {
+        &__title {
+            padding-left: 24px;
+        }
+    }
+}
+
+@media (min-width: 1120px) {
+    .section-name {
+        &__title {
+            padding-left: 32px;
+        }
+    }
+}

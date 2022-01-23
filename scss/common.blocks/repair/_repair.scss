@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+    .repair {
+        &__logo-list {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 24px;
+            padding-left: 12px;
+            padding-right: 12px;
+            height: 203px;
+            overflow-y: hidden;
+        }
+
+        &__logo-list--overflow {
+            overflow-y: visible;
+            transition: overflow-y 2s ease;
+        }
+
+        &__logo-item {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        &__read-more {
+            margin-left: 32px;
+            margin-top: 4px;
+            margin-bottom: 34px;
+            padding: 0;
+        }
+    }
+}
+
+.test {
+    max-height: 100%;
+}
+
+@media (min-width: 1120px) {
+    .repair {
+        &__logo-list {
+            padding-left: 16px;
+        }
+
+        &__logo-item {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        &__read-more {
+            margin-left: 39px;
+        }
+    }
+}
