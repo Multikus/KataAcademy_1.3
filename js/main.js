@@ -10,15 +10,15 @@ const showAll = function(arr) {
     let heightAllElem = 0;
     let heightElement = 0;
     let widthElement = arr[0].offsetWidth;
-    let blocWidth = overflow.offsetWidth; //1120
-    let elementInRow = Math.floor(blocWidth / widthElement);//кол-во элментов в строке
-    let needShowRow = Math.ceil(arr.length / elementInRow) - 2;// сколько всего строк надо 
+    let blocWidth = overflow.offsetWidth;
+    let elementInRow = Math.floor(blocWidth / widthElement);
+    let needShowRow = Math.ceil(arr.length / elementInRow) - 2;
 
     for(let i = 0; i < arr.length; i++) {
         heightAllElem =  heightAllElem + (arr[i].offsetHeight + 16)
     }
 
-    heightElement = Math.floor(heightAllElem / arr.length);//среднее значение высоты эл
+    heightElement = Math.floor(heightAllElem / arr.length);
 
     return needShowRow * heightElement
 }
