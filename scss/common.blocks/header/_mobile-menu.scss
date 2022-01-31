@@ -4,8 +4,9 @@
     left: 0;
     width: 100vw;
     height: 200vh;
-    z-index: 5;
+    z-index: 98;
     background-color: $header;
+    opacity: 0.9;
 }
 
 .overlay--visually-toggle {
@@ -22,7 +23,7 @@
     top: 0;
     left: 0;
     width: 320px;
-    z-index: 10;
+    z-index: 99;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 
     &__header-list {
@@ -126,6 +127,7 @@
         color: $title;
         font-size: 16px;
         line-height: 24px;
+        text-decoration: none;
     }
 
     &__link-phone {
@@ -136,6 +138,7 @@
         line-height: 32px;
         letter-spacing: -0.6px;
         font-weight: 700;
+        text-decoration: none;
     }
 
     &__lang {
