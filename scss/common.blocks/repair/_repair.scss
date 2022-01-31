@@ -21,15 +21,19 @@
     }
 }
 
+@media (min-width: 371px) {
+    .repair {
+        &__slider-pagination {
+            display: none;
+        }
+    }
+}
+
 @media (min-width: 768px) {
     .repair {
 
         &__slider {
             padding-bottom: 0;
-        }
-
-        &__slider-pagination {
-            display: none;
         }
 
         &__logo-list {
