@@ -5,6 +5,8 @@ const mobileMenuBtnClose = document.querySelector('.mobile-menu__btn-close');
 const repairLogoItem = document.querySelectorAll('.repair__logo-item');
 const overflow = document.querySelector('.repair__logo-list');
 const repairReadMoreBtn = document.querySelector('.repair__read-more');
+const slider = document.querySelector('.repair__slider');
+let mySwiper;
 
 const showAll = function(arr) {
     let heightAllElem = 0;
@@ -53,11 +55,9 @@ repairReadMoreBtn.addEventListener('click', () => {
     }
 });
 
-// slider
-document.addEventListener('DOMContentLoaded', () => {
-    const width = window.innerWidth
-    if (width < 370){
-        new Swiper('.repair__slider', {
+const startSlider = function() {
+    if (window.innerWidth <= 370 && slider.dataset.mobile == 'false') {
+        mySwiper = new Swiper( slider, {
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
@@ -69,11 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
             observer: true,
             observeParents: true,
             observeSlideChildren: true
-        
         });
+
+        slider.dataset.mobile = 'true';
     }
-});
+
+    if ( window.innerWidth > 370 ) {
+        slider.dataset.mobile = 'false';
+
+        if (slider.classList.contains('swiper-initialized')) {
+            mySwiper.destroy();
+        }
+    }
+}
+
+startSlider();
 
 window.addEventListener('resize', () => {
-        document.location.reload();
+    startSlider();
 });

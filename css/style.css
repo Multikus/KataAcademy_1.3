@@ -734,12 +734,15 @@ body {
   display: none;
 }
 
+@media (min-width: 371px) {
+  .repair__slider-pagination {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .repair__slider {
     padding-bottom: 0;
-  }
-  .repair__slider-pagination {
-    display: none;
   }
   .repair__logo-list {
     -ms-flex-wrap: wrap;
@@ -806,24 +809,8 @@ body {
 
 @media (min-width: 768px) {
   .partner-logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     width: 224px;
     height: 72px;
-    padding: 13px 16px;
-    border: 1px solid #EAEAEA;
-    background-color: #ffffff;
   }
 }
 
