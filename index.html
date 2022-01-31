@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script defer src="./js/main.js"></script>
 </head>
 
@@ -215,79 +217,84 @@
             <div class="section-name">
                 <h3 class="section-name__title">ремонт техники различных брендов</h3>
             </div>
-                <ul class="repair__logo-list">
-                    <li class="partner-logo repair__logo-item">
+
+            <div class="swiper-container repair__slider">
+                <ul class="swiper-wrapper repair__logo-list">
+
+                    <li class="swiper-slide partner-logo repair__logo-item ">
                         <img class="partner__logo-img" src="./img/svg/Partners/lenovo.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/samsung.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/apple.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/viewsonic.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/bosch.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/hp.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/acer.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/sony.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/lenovo.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/samsung.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
-                    <li class="partner-logo repair__logo-item">
+                    <li class="partner-logo repair__logo-item swiper-slide">
                         <img class="partner__logo-img" src="./img/svg/Partners/apple.svg" alt="логотип компании">
                         <a class="partner__link" href="#">
                             <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                         </a>
                     </li>
                 </ul>
+                <div class="swiper-pagination repair__slider-pagination"></div>
+            </div>
 
-                <button type="button" class="read-more repair__read-more button-default">
-                    <img class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
-                    Показать всё
-                </button>
+            <button type="button" class="read-more repair__read-more button-default">
+                <img class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
+                Показать всё
+            </button>
 
         </section>
     </main>

@@ -23,18 +23,15 @@ const showAll = function(arr) {
     return needShowRow * heightElement
 }
 
-
-headerBurgerBtn.addEventListener('click', () => {
+const openCloseMenu = function() {
     overlay.classList.toggle('overlay--visually-toggle');
     mobileMenu.classList.toggle('mobile-menu--visually-toggle');
     mobileMenuBtnClose.classList.toggle('mobile-menu--visually-toggle');
-});
+}
 
-mobileMenuBtnClose.addEventListener('click', () => {
-    overlay.classList.toggle('overlay--visually-toggle');
-    mobileMenu.classList.toggle('mobile-menu--visually-toggle');
-    mobileMenuBtnClose.classList.toggle('mobile-menu--visually-toggle');
-});
+headerBurgerBtn.addEventListener('click', openCloseMenu);
+mobileMenuBtnClose.addEventListener('click', openCloseMenu);
+overlay.addEventListener('click', openCloseMenu);
 
 repairReadMoreBtn.addEventListener('click', () => {
     if(!overflow.classList.contains('repair__logo-list--overflow')) {
@@ -46,7 +43,7 @@ repairReadMoreBtn.addEventListener('click', () => {
         `;
 
     } else {
-        overflow.style.height = 203 + 'px';
+        overflow.style.height = '190px';
         overflow.style.overflowY = 'hidden';
         overflow.classList.remove('repair__logo-list--overflow');
         repairReadMoreBtn.innerHTML = `
@@ -54,4 +51,29 @@ repairReadMoreBtn.addEventListener('click', () => {
             Показать всё
         `;
     }
+});
+
+// slider
+document.addEventListener('DOMContentLoaded', () => {
+    const width = window.innerWidth
+    if (width < 370){
+        new Swiper('.repair__slider', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            spaceBetween: 16,
+            slidesPerView: 1.2,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true
+        
+        });
+    }
+});
+
+window.addEventListener('resize', () => {
+        document.location.reload();
 });

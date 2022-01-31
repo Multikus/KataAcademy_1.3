@@ -306,8 +306,9 @@ body {
   left: 0;
   width: 100vw;
   height: 200vh;
-  z-index: 5;
+  z-index: 98;
   background-color: #ffffff;
+  opacity: 0.9;
 }
 
 .overlay--visually-toggle {
@@ -324,7 +325,7 @@ body {
   top: 0;
   left: 0;
   width: 320px;
-  z-index: 10;
+  z-index: 99;
   -webkit-box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
           box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
@@ -443,6 +444,7 @@ body {
   color: #1B1C21;
   font-size: 16px;
   line-height: 24px;
+  text-decoration: none;
 }
 
 .menu-footer__link-phone {
@@ -453,6 +455,7 @@ body {
   line-height: 32px;
   letter-spacing: -0.6px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .menu-footer__lang {
@@ -709,18 +712,44 @@ body {
   }
 }
 
+.repair__slider {
+  position: relative;
+  overflow-x: hidden;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 38px;
+}
+
+.repair__slider-pagination {
+  position: absolute;
+}
+
+.repair__logo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.repair__read-more {
+  display: none;
+}
+
 @media (min-width: 768px) {
+  .repair__slider {
+    padding-bottom: 0;
+  }
+  .repair__slider-pagination {
+    display: none;
+  }
   .repair__logo-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding-top: 24px;
-    padding-left: 12px;
     padding-right: 12px;
-    height: 203px;
+    height: 190px;
     overflow-y: hidden;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .repair__logo-list--overflow {
     overflow-y: visible;
@@ -728,7 +757,6 @@ body {
     transition: overflow-y 2s ease;
   }
   .repair__logo-item {
-    margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 16px;
     border-radius: 6px;
@@ -740,24 +768,40 @@ body {
     margin-top: 4px;
     margin-bottom: 34px;
     padding: 0;
+    display: block;
   }
-}
-
-.test {
-  max-height: 100%;
 }
 
 @media (min-width: 1120px) {
-  .repair__logo-list {
-    padding-left: 16px;
-  }
   .repair__logo-item {
     margin-left: 16px;
     margin-right: 16px;
   }
   .repair__read-more {
     margin-left: 39px;
+    display: block;
   }
+}
+
+.partner-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 0;
+  width: 224px;
+  padding: 13px 16px;
+  border: 1px solid #EAEAEA;
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -776,6 +820,7 @@ body {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 224px;
+    height: 72px;
     padding: 13px 16px;
     border: 1px solid #EAEAEA;
     background-color: #ffffff;
