@@ -1,0 +1,56 @@
+
+
+@media (min-width: 768px) {
+    .repair-tech {
+        padding-left: 24px;
+        padding-right: 24px;
+
+		&__title {
+		}
+
+		&__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+		}
+
+		&__item {
+            display: flex;
+            justify-content: space-between;
+            width: 224px;
+            height: 160px;
+            background-color: $repCard;
+            border: 1px solid $borderLogoPartners;
+            border-radius: 6px;
+            margin-top: 24px;
+            padding: 16px;
+		}
+
+		&__title-card {
+            @include font(16px, 24px, -0.2px, $title)
+		}
+
+		&__link {
+            text-decoration: none;
+            align-self: flex-end;
+		}
+
+		&__read-more {
+            margin-top: 24px;
+            margin-bottom: 33px;
+		}
+    }
+}
+
+@media (min-width: 1120px) {
+    .repair-tech {
+        
+        &__item {
+            width: 240px;
+        }
+
+        &__read-more {
+            margin-bottom: 50px;
+		}
+    }
+}

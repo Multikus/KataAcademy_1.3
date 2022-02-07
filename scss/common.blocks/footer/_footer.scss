@@ -1,0 +1,78 @@
+.footer {
+    max-width: 320px;
+    background-image: linear-gradient(270deg, $mbg 0%, $sectionTitleBg 93%);
+    box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &__item {
+        @include font(14px, 18px, 0.2px, $textm);
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__copy {
+        margin-top: 18px;
+    }
+
+    &__text-info {
+        margin-bottom: 19px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        box-sizing: border-box;
+        max-width: 768px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 32px;
+        padding-bottom: 25px;
+
+        &__copy {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 218px;
+            margin: 0;
+        }
+
+        &__year-copy {
+            margin: 0;
+            align-self: flex-start;
+        }
+
+        &__text-copy {
+            white-space: nowrap;
+        }
+        
+        &__politics {
+            flex-grow: 1;
+            white-space: nowrap;
+            width: 214px;
+        }
+
+        &__info {
+            width: 213px;
+        }
+
+        &__text-info {
+            margin-bottom: 0;
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 1120px) {
+    .footer {
+        max-width: 1120px;
+        padding: 32px 33px 21px 31px;
+
+        &__info {
+            width: 330px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin font($fz, $lh, $ls, $col) {
+    font-family: 'TT Lakes';
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color: $col;
+}

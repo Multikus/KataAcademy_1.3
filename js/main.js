@@ -6,6 +6,8 @@ const repairLogoItem = document.querySelectorAll('.repair__logo-item');
 const overflow = document.querySelector('.repair__logo-list');
 const repairReadMoreBtn = document.querySelector('.repair__read-more');
 const slider = document.querySelector('.repair__slider');
+const repairTechItem = document.querySelectorAll('.hide-js');
+const repairTechReadMoreBtn = document.querySelector('.repair-tech__read-more');
 let mySwiper;
 
 const showAll = function(arr) {
@@ -55,6 +57,7 @@ repairReadMoreBtn.addEventListener('click', () => {
     }
 });
 
+//swiper
 const startSlider = function() {
     if (window.innerWidth <= 370 && slider.dataset.mobile == 'false') {
         mySwiper = new Swiper( slider, {
@@ -87,4 +90,23 @@ startSlider();
 
 window.addEventListener('resize', () => {
     startSlider();
+});
+
+//скрываем элементы
+const showHideRepairTechCard = function(list, setDataName) {
+
+    for ( let i = 0; i <= list.length; i++ ) {
+        if( list[i].dataset.setDataName == 'false' && 
+            list[i].classList.contains('hide-js') ) {
+            list[i].style.display = 'block';
+            list[i].dataset.setDataName = 'true';
+        } else {
+            list[i].style.display = 'none';
+            list[i].dataset.setDataName = 'false';
+        }
+    }
+}
+
+repairTechReadMoreBtn.addEventListener('click', () => {
+    showHideRepairTechCard(repairTechItem, 'visible');
 });
