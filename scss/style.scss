@@ -1,5 +1,6 @@
 @import "_vars.scss";
 @import "_fonts.scss";
+@import "_mixins.scss";
 
 html {
     box-sizing: border-box;
@@ -54,5 +55,9 @@ body {
 @import "common.blocks/read-more/read-more";
 @import "common.blocks/promo-img/promo-img";
 @import "common.blocks/repair/repair";
+@import "common.blocks/repair-tech/repair-tech";
+@import "common.blocks/price/price";
 @import "common.blocks/partner-logo/partner-logo";
 @import "common.blocks/section-title/section-title";
+@import "common.blocks/footer/footer";
+@import "_js-style.scss";
