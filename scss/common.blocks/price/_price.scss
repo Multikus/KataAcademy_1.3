@@ -1,0 +1,85 @@
+.price {
+
+    &__table-box {
+        background-color: $bgColorPriceBox;
+        box-sizing: border-box;
+        background-color: $mbg;
+        padding-left: 32px;
+    }
+
+    &__service-lists {
+        display: grid;
+        grid-template-columns: 3fr repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        
+        @include font(14px, 18px, 0.2px, $title);
+        border-bottom: 1px solid $borderLogoPartners;
+        background-color: $bgColorPriceBox;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &__service-title {
+        display: grid;
+        grid-template-columns: 6fr 2fr 3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    &__service-title {
+        background-color: $mbg;
+        color: $textm;
+    }
+
+    &__service-item {
+        padding-top: 23px;
+        padding-bottom: 23px;
+
+        &--order-fourth-elem {
+            margin-left: 65px;
+        }
+    }
+
+    &__btn-order {
+        position: relative;
+        @include font(12px, 24px, -0.15px, $priceOrderBtn);
+        text-transform: uppercase;
+        background-color: $bgColorOrderBtn;
+        border-radius: 16px;
+        padding: 4px 40px 4px 12px;
+
+        &::after {
+            content: url(../../../img/svg/dropdown.svg);
+            position: absolute;
+            top: 4px;
+            right: 16px;
+        }
+    }
+
+    &__descripition-box {
+        width: 455px;
+        margin-top: 32px;
+        padding-left: 32px;
+    }
+
+    &__description {
+        @include font(14px, 20px, 0.2px, $title);
+        margin-bottom: 20px;
+    }
+
+    &__get-offer-btn {
+        position: relative;
+        @include font(16px, 24px, -0.2px, $title);
+        font-weight: 500;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    &__offer-img-arrow {
+        fill: $bgColorOrderBtn;
+    }
+}
+

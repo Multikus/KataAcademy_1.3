@@ -66,6 +66,16 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .button-default {
   border: none;
   background: none;
@@ -466,6 +476,46 @@ body {
   margin-bottom: 32px;
 }
 
+@media (min-width: 1440px) {
+  .mobile-menu--visually-toggle {
+    display: block;
+  }
+  .mobile-menu {
+    background-color: #ffffff;
+    position: relative;
+    width: 306px;
+    z-index: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .mobile-menu__menu-footer {
+    margin-top: 305px;
+  }
+  .mobile-menu__item {
+    position: relative;
+  }
+  .mobile-menu__item::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 2px;
+    top: 30px;
+    left: 0;
+    background-color: #41F6D7;
+  }
+  .mobile-menu__item:hover:before {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transition-duration: 400ms;
+            transition-duration: 400ms;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  .mobile-menu__btn-close {
+    display: none;
+  }
+}
+
 .container {
   padding: 0px 16px;
   overflow-x: hidden;
@@ -844,6 +894,110 @@ body {
   }
 }
 
+.price__table-box {
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #F8F8F8;
+  padding-left: 32px;
+}
+
+.price__service-lists {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr (1fr)[3];
+      grid-template-columns: 3fr repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-family: 'TT Lakes';
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+  border-bottom: 1px solid #EAEAEA;
+  background-color: #ffffff;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.price__service-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6fr 2fr 3fr 1fr;
+      grid-template-columns: 6fr 2fr 3fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.price__service-title {
+  background-color: #F8F8F8;
+  color: #7E7E82;
+}
+
+.price__service-item {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.price__service-item--order-fourth-elem {
+  margin-left: 65px;
+}
+
+.price__btn-order {
+  position: relative;
+  font-family: 'TT Lakes';
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #FF3E79;
+  border-radius: 16px;
+  padding: 4px 40px 4px 12px;
+}
+
+.price__btn-order::after {
+  content: url(../../../img/svg/dropdown.svg);
+  position: absolute;
+  top: 4px;
+  right: 16px;
+}
+
+.price__descripition-box {
+  width: 455px;
+  margin-top: 32px;
+  padding-left: 32px;
+}
+
+.price__description {
+  font-family: 'TT Lakes';
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #1B1C21;
+  margin-bottom: 20px;
+}
+
+.price__get-offer-btn {
+  position: relative;
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.price__offer-img-arrow {
+  fill: #FF3E79;
+}
+
 .partner-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -879,8 +1033,7 @@ body {
 }
 
 .section-name {
-  background-image: -webkit-gradient(linear, right top, left top, from(#F8F8F8), color-stop(93%, #ffffff));
-  background-image: linear-gradient(270deg, #F8F8F8 0%, #ffffff 93%);
+  background-image: linear-gradient(78deg, #F8F8F8 0%, #ffffff 93%);
   -webkit-box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
           box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
 }
@@ -916,6 +1069,7 @@ body {
           box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
   padding-left: 16px;
   padding-right: 16px;
+  margin: 0 auto;
 }
 
 .footer__item {
