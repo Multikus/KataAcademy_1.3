@@ -4,6 +4,7 @@
     box-shadow: 0px 2px 4px -3px rgba(65, 246, 215, 0.62) inset;
     padding-left: 16px;
     padding-right: 16px;
+    margin: 0 auto;
 
     &__item {
         @include font(14px, 18px, 0.2px, $textm);

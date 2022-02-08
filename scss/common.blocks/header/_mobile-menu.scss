@@ -149,3 +149,46 @@
         margin-bottom: 32px;
     }
 }
+
+@media (min-width: 1440px) {
+    .mobile-menu--visually-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        background-color: $header;
+        position: relative;
+        width: 306px;
+        z-index: 0;
+        box-shadow: none;
+
+        &__menu-footer {
+            margin-top: 305px;
+        }
+
+        &__item {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 250px;
+                height: 2px;
+                top: 30px;
+                left: 0;
+                background-color: $decor;
+            }
+
+            &:hover {
+                &:before {
+                    transform: translateX(0px);
+                    transition-duration: 400ms;
+                    transition-timing-function: ease-in-out;
+                }
+            }
+        }
+
+        &__btn-close {
+            display: none;
+        }
+    }
+}
