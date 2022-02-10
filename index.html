@@ -405,7 +405,7 @@
                         <li class="price__service-item price__service-item--order-second-elem">Бесплатно</li>
                         <li class="price__service-item price__service-item--order-third-elem">30 мин</li>
                         <li class="price__service-item price__service-item--order-fourth-elem">
-                            <button class="price__btn-order button-default" type="'button">
+                            <button class="price__btn-order button-order button-default" type="'button">
                                 заказать
                             </button>
                         </li>
@@ -415,7 +415,7 @@
                         <li class="price__service-item price__service-item--order-second-elem">1000 ₽</li>
                         <li class="price__service-item price__service-item--order-third-elem">30 - 120 мин</li>
                         <li class="price__service-item price__service-item--order-fourth-elem">
-                            <button class="price__btn-order button-default" type="'button">
+                            <button class="price__btn-order button-order button-default" type="'button">
                                 заказать
                             </button>
                         </li>
@@ -425,7 +425,7 @@
                         <li class="price__service-item price__service-item--order-second-elem">1000 ₽</li>
                         <li class="price__service-item price__service-item--order-third-elem">30 - 120 мин</li>
                         <li class="price__service-item price__service-item--order-fourth-elem">
-                            <button class="price__btn-order button-default" type="'button">
+                            <button class="price__btn-order button-order button-default" type="'button">
                                 заказать
                             </button>
                         </li>
@@ -435,7 +435,7 @@
                         <li class="price__service-item price__service-item--order-second-elem">1000 ₽</li>
                         <li class="price__service-item price__service-item--order-third-elem">30 - 120 мин</li>
                         <li class="price__service-item price__service-item--order-fourth-elem">
-                            <button class="price__btn-order button-default" type="'button">
+                            <button class="price__btn-order button-order button-default" type="'button">
                                 заказать
                             </button>
                         </li>
@@ -445,7 +445,7 @@
                         <li class="price__service-item price__service-item--order-second-elem">1000 ₽</li>
                         <li class="price__service-item price__service-item--order-third-elem">30 - 120 мин</li>
                         <li class="price__service-item price__service-item--order-fourth-elem">
-                            <button class="price__btn-order button-default" type="'button">
+                            <button class="price__btn-order button-order button-default" type="'button">
                                 заказать
                             </button>
                         </li>
@@ -461,33 +461,54 @@
                         <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="price__offer-img-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M3.8 4.99994L0.791554 2.229C0.3641 1.83529 0.361125 1.16138 0.785088 0.763917L0.920293 0.637162C1.30321 0.278177 1.89851 0.276333 2.28364 0.632939L6.93812 4.94264C6.9715 4.97355 6.9715 5.02633 6.93812 5.05723L2.34674 9.30851C1.92606 9.69803 1.27582 9.69601 0.857554 9.30389C0.394457 8.86974 0.397706 8.13363 0.864616 7.70358L3.8 4.99994Z" fill="white"/>
                         </svg>
-                        <!-- <img class="price__offer-img-arrow" src="./img/svg/dropdown.svg" alt="Кнопка заказа услуги"> -->
                     </button>
                 </div>
             </section>
+
+            <footer class="footer">
+                <div class="footer__copy">
+                    <span class="footer__year-copy footer__item">
+                        © 2019 CPS 
+                    </span>
+                    <span class="footer__text-copy footer__item">
+                        Разработано командой Apesong
+                    </span>
+                </div>
+                <div class="footer__politics">
+                    <a class="footer__politics-text footer__item">
+                        Политика конфиденциальности
+                    </a>
+                </div>
+                <div class="footer__info">
+                    <span class="footer__text-info footer__item">
+                        Информация, размещенная на данной странице, не является публичной офертой
+                    </span>
+                </div>
+            </footer>
         </div>
     </main>
 
-    <footer class="footer">
-            <div class="footer__copy">
-                <span class="footer__year-copy footer__item">
-                    © 2019 CPS 
-                </span>
-                <span class="footer__text-copy footer__item">
-                    Разработано командой Apesong
-                </span>
-            </div>
-            <div class="footer__politics">
-                <a class="footer__politics-text footer__item">
-                    Политика конфиденциальности
-                </a>
-            </div>
-            <div class="footer__info">
-                <span class="footer__text-info footer__item">
-                    Информация, размещенная на данной странице, не является публичной офертой
-                </span>
-            </div>
-    </footer>
-</body>
+    <!-- popups -->
+    <div class="feedback hide-js">
+        <button class="feedback__close-popup button-default">
+            <img class="feedback__btn-close-img" src="./img/svg/closeBtn.svg" alt="Кнопка закрытия формы обратной связи" >
+        </button>
+        <h1 class="feedback__title title">Обратная связь</h1>
+        <form action="#" class="feedback__form popup-form">
+            <input type="text" name="user-name" class="popup-form__field-name popup-form__item" placeholder="Имя">
+            <input type="tel" name="user-phone" class="popup-form__field-phone popup-form__item" placeholder="Телефон">
+            <input type="email" name="user-email" class="popup-form__field-email popup-form__item" placeholder="Электронная почта">
+            <textarea name="user-message" cols="30" rows="5" class="popup-form__field-message popup-form__item" placeholder="Сообщение"></textarea>
+        </form>
+        <p class="feedback__politics">
+            Нажимая “отправить”, вы даете согласие на 
+            <span class="feedback__politics--color-text">обработку персональных данных</span> и соглашаетесь с нашей 
+            <a href="" class="feedback__politics-link feedback__politics--color-text">
+                политикой конфиденциальности
+            </a> 
+        </p>
+        <button class="feedback__send-feedback button-default button-order">Отправить</button>
+    </div>
 
+</body>
 </html>

@@ -1,0 +1,101 @@
+.feedback {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    height: 100vh;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: $bgPopup;
+    box-shadow: 5px 0px 6px -7px rgba(65, 246, 215, 1) inset;
+    margin: 0 auto;
+
+    &__close-popup {
+        position: absolute;
+        top: 24px;
+        left: 16px;
+    }
+
+    &__title {
+        position: relative;
+        @include font(24px, 32px, -0.6px, $title);
+        margin-bottom: 24px;
+        margin-top: 100px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: -33px;
+            width: 3px;
+            height: 40px;
+            background-color: #41F6D7;
+            border-radius: 0px 2px 2px 0px;
+        }
+    }
+
+    &__politics {
+        @include font(14px, 16px, 0.2, $textm);
+    }
+
+    &__politics--color-text {
+        color: $bgColorOrderBtn;
+    }
+
+    &__politics-link {
+        @include font(14px, 16px, 0.2, $bgColorOrderBtn);
+        text-decoration: none;
+    }
+
+    &__send-feedback {
+        align-self: flex-end;
+        margin-top: 19px;
+    }
+}
+
+.popup-form {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        margin-bottom: 16px;
+        padding-top: 12px;
+        padding-left: 16px;
+        padding-bottom: 12px;
+        box-sizing: border-box;
+        border: 1px solid $borderLogoPartners;
+        border-radius: 8px;
+
+        &::placeholder {
+            @include font(16px, 24px, -0.2px, $popupTextPlaceholder);
+        }
+    }
+
+    &__field-message {
+        resize: none;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .feedback {
+        max-width: 440px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 40px;
+
+        &__title {
+            margin-top: 0px;
+        }
+
+        &__send-feedback {
+            margin-top: 23px;
+        }
+
+        &__close-popup {
+            position: absolute;
+            top: 31px;
+            left: -65px;
+        }
+    }
+}
