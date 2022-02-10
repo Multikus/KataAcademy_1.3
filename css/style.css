@@ -310,6 +310,10 @@ body {
   }
 }
 
+.aside-menu {
+  background-color: white;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -947,26 +951,6 @@ body {
   margin-left: 65px;
 }
 
-.price__btn-order {
-  position: relative;
-  font-family: 'TT Lakes';
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: -0.15px;
-  color: #ffffff;
-  text-transform: uppercase;
-  background-color: #FF3E79;
-  border-radius: 16px;
-  padding: 4px 40px 4px 12px;
-}
-
-.price__btn-order::after {
-  content: url(../../../img/svg/dropdown.svg);
-  position: absolute;
-  top: 4px;
-  right: 16px;
-}
-
 .price__descripition-box {
   width: 455px;
   margin-top: 32px;
@@ -1150,10 +1134,182 @@ body {
   .footer {
     max-width: 1120px;
     padding: 32px 33px 21px 31px;
+    margin-left: 0;
   }
   .footer__info {
     width: 330px;
   }
+}
+
+.feedback {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 320px;
+  height: 100vh;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 0px 6px -7px #41f6d7 inset;
+          box-shadow: 5px 0px 6px -7px #41f6d7 inset;
+  margin: 0 auto;
+}
+
+.feedback__close-popup {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+
+.feedback__title {
+  position: relative;
+  font-family: 'TT Lakes';
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #1B1C21;
+  margin-bottom: 24px;
+  margin-top: 100px;
+}
+
+.feedback__title::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -33px;
+  width: 3px;
+  height: 40px;
+  background-color: #41F6D7;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.feedback__politics {
+  font-family: 'TT Lakes';
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2;
+  color: #7E7E82;
+}
+
+.feedback__politics--color-text {
+  color: #FF3E79;
+}
+
+.feedback__politics-link {
+  font-family: 'TT Lakes';
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2;
+  color: #FF3E79;
+  text-decoration: none;
+}
+
+.feedback__send-feedback {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 19px;
+}
+
+.popup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup-form__item {
+  margin-bottom: 16px;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+}
+
+.popup-form__item::-webkit-input-placeholder {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #B5B6BC;
+}
+
+.popup-form__item:-ms-input-placeholder {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #B5B6BC;
+}
+
+.popup-form__item::-ms-input-placeholder {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #B5B6BC;
+}
+
+.popup-form__item::placeholder {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #B5B6BC;
+}
+
+.popup-form__field-message {
+  resize: none;
+}
+
+@media (min-width: 1120px) {
+  .feedback {
+    max-width: 440px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+  }
+  .feedback__title {
+    margin-top: 0px;
+  }
+  .feedback__send-feedback {
+    margin-top: 23px;
+  }
+  .feedback__close-popup {
+    position: absolute;
+    top: 31px;
+    left: -65px;
+  }
+}
+
+.button-order {
+  position: relative;
+  font-family: 'TT Lakes';
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #FF3E79;
+  border-radius: 16px;
+  padding: 4px 40px 4px 12px;
+}
+
+.button-order::after {
+  content: url(../../../img/svg/dropdown.svg);
+  position: absolute;
+  top: 4px;
+  right: 16px;
 }
 
 .hide-js {

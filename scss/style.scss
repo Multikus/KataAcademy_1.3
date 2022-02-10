@@ -55,8 +55,10 @@ body {
     }
 }
 
+
 @import "common.blocks/header/header";
 @import "common.blocks/chapter/chapter";
+@import "common.blocks/asside-menu/asside-menu";
 @import "common.blocks/header/mobile-menu";
 @import "common.blocks/menu/menu";
 @import "common.blocks/description/description";
@@ -68,4 +70,6 @@ body {
 @import "common.blocks/partner-logo/partner-logo";
 @import "common.blocks/section-title/section-title";
 @import "common.blocks/footer/footer";
+@import "common.blocks/feedback/feedback";
+@import "common.blocks/button-order/button-order";
 @import "_js-style.scss";
