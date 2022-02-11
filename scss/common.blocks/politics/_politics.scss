@@ -1,0 +1,15 @@
+.politics { 
+    @include font(14px, 16px, 0.2, $textm);
+
+    &__text {
+        
+        &--color {
+            color: $bgColorOrderBtn;
+        }
+    }
+
+    &__link {
+        @include font(14px, 16px, 0.2, $bgColorOrderBtn);
+        text-decoration: none;
+    }
+}

@@ -1,32 +1,35 @@
 .price {
-
+    overflow-x: hidden;
     &__table-box {
+        display: flex;
+        flex-wrap: nowrap;
         background-color: $bgColorPriceBox;
         box-sizing: border-box;
         background-color: $mbg;
-        padding-left: 32px;
+        padding-left: 8px;
+        margin-top: 16px;
     }
 
     &__service-lists {
-        display: grid;
-        grid-template-columns: 3fr repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        
-        @include font(14px, 18px, 0.2px, $title);
-        border-bottom: 1px solid $borderLogoPartners;
+        min-width: 260px;
+        height: 200px;
+        @include font(14px, 16px, 0.2px, $textm);
+        border-radius: 6px;
         background-color: $bgColorPriceBox;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding: 16px;
+
+// удалить после запуска слайдера
+        margin-right: 16px;
     }
 
     &__service-title {
-        display: grid;
-        grid-template-columns: 6fr 2fr 3fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        &--mobile-visible-hide {
+            display: none;
+        }
+
+        &--only-mobile-visible {
+
+        }
     }
 
     &__service-title {
@@ -35,9 +38,8 @@
     }
 
     &__service-item {
-        padding-top: 23px;
-        padding-bottom: 23px;
-
+        color: $title;
+        display: block;
         &--order-fourth-elem {
             margin-left: 65px;
         }
@@ -68,3 +70,115 @@
     }
 }
 
+
+
+
+
+@media (min-width: 400px) {
+    .price {
+
+        &__service-title {
+
+            &--only-mobile-visible {
+                display: none;
+            }
+        }
+
+        &__title-repair-services {
+
+            &--only-mobile-visible {
+                display: none;
+            }
+        }
+
+        &__title-price {
+
+            &--only-mobile-visible {
+                display: none;
+            }
+        }
+
+        &__title-term {
+
+            &--only-mobile-visible {
+                display: none;
+            }
+        } 
+    }
+}
+
+@media (min-width: 768px) {
+    .price {
+
+        &__table-box {
+            display: block;
+            flex-wrap: nowrap;
+            background-color: $bgColorPriceBox;
+            box-sizing: border-box;
+            background-color: $mbg;
+            padding-left: 32px;
+        }
+    
+        &__service-lists {
+            min-width: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: 3fr repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            
+            @include font(14px, 18px, 0.2px, $title);
+            border-bottom: 1px solid $borderLogoPartners;
+            background-color: $bgColorPriceBox;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    
+        &__service-title {
+            display: grid;
+            grid-template-columns: 6fr 2fr 3fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+    //посмотреть
+        &__service-title {
+            background-color: $mbg;
+            color: $textm;
+        }
+    
+        &__service-item {
+            padding-top: 23px;
+            padding-bottom: 23px;
+    
+            &--order-fourth-elem {
+                margin-left: 65px;
+            }
+        }
+    
+    
+        &__descripition-box {
+            width: 455px;
+            margin-top: 32px;
+            padding-left: 32px;
+        }
+    
+        &__description {
+            @include font(14px, 20px, 0.2px, $title);
+            margin-bottom: 20px;
+        }
+    
+        &__get-offer-btn {
+            position: relative;
+            @include font(16px, 24px, -0.2px, $title);
+            font-weight: 500;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+    
+        &__offer-img-arrow {
+            fill: $bgColorOrderBtn;
+        }
+    }
+}

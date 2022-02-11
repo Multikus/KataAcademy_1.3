@@ -898,43 +898,40 @@ body {
   }
 }
 
+.price {
+  overflow-x: hidden;
+}
+
 .price__table-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #F8F8F8;
-  padding-left: 32px;
+  padding-left: 8px;
+  margin-top: 16px;
 }
 
 .price__service-lists {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 3fr (1fr)[3];
-      grid-template-columns: 3fr repeat(3, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  min-width: 260px;
+  height: 200px;
   font-family: 'TT Lakes';
   font-size: 14px;
-  line-height: 18px;
+  line-height: 16px;
   letter-spacing: 0.2px;
-  color: #1B1C21;
-  border-bottom: 1px solid #EAEAEA;
+  color: #7E7E82;
+  border-radius: 6px;
   background-color: #ffffff;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 16px;
+  margin-right: 16px;
 }
 
-.price__service-title {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 6fr 2fr 3fr 1fr;
-      grid-template-columns: 6fr 2fr 3fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+.price__service-title--mobile-visible-hide {
+  display: none;
 }
 
 .price__service-title {
@@ -943,8 +940,8 @@ body {
 }
 
 .price__service-item {
-  padding-top: 23px;
-  padding-bottom: 23px;
+  color: #1B1C21;
+  display: block;
 }
 
 .price__service-item--order-fourth-elem {
@@ -980,6 +977,103 @@ body {
 
 .price__offer-img-arrow {
   fill: #FF3E79;
+}
+
+@media (min-width: 400px) {
+  .price__service-title--only-mobile-visible {
+    display: none;
+  }
+  .price__title-repair-services--only-mobile-visible {
+    display: none;
+  }
+  .price__title-price--only-mobile-visible {
+    display: none;
+  }
+  .price__title-term--only-mobile-visible {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .price__table-box {
+    display: block;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background-color: #ffffff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #F8F8F8;
+    padding-left: 32px;
+  }
+  .price__service-lists {
+    min-width: auto;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr (1fr)[3];
+        grid-template-columns: 3fr repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    border-bottom: 1px solid #EAEAEA;
+    background-color: #ffffff;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .price__service-title {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 6fr 2fr 3fr 1fr;
+        grid-template-columns: 6fr 2fr 3fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .price__service-title {
+    background-color: #F8F8F8;
+    color: #7E7E82;
+  }
+  .price__service-item {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  .price__service-item--order-fourth-elem {
+    margin-left: 65px;
+  }
+  .price__descripition-box {
+    width: 455px;
+    margin-top: 32px;
+    padding-left: 32px;
+  }
+  .price__description {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    margin-bottom: 20px;
+  }
+  .price__get-offer-btn {
+    position: relative;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .price__offer-img-arrow {
+    fill: #FF3E79;
+  }
 }
 
 .partner-logo {
@@ -1181,14 +1275,14 @@ body {
   content: "";
   position: absolute;
   top: -8px;
-  left: -33px;
+  left: -17px;
   width: 3px;
   height: 40px;
   background-color: #41F6D7;
   border-radius: 0px 2px 2px 0px;
 }
 
-.feedback__politics {
+.feedback .politics {
   font-family: 'TT Lakes';
   font-size: 14px;
   line-height: 16px;
@@ -1196,11 +1290,11 @@ body {
   color: #7E7E82;
 }
 
-.feedback__politics--color-text {
+.feedback .politics__text--color {
   color: #FF3E79;
 }
 
-.feedback__politics-link {
+.feedback .politics__link {
   font-family: 'TT Lakes';
   font-size: 14px;
   line-height: 16px;
@@ -1282,6 +1376,9 @@ body {
   .feedback__title {
     margin-top: 0px;
   }
+  .feedback__title::before {
+    left: -33px;
+  }
   .feedback__send-feedback {
     margin-top: 23px;
   }
@@ -1290,6 +1387,12 @@ body {
     top: 31px;
     left: -65px;
   }
+}
+
+.back-call__send-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 19px;
 }
 
 .button-order {
