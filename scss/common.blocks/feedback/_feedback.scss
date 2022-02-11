@@ -26,7 +26,7 @@
             content: "";
             position: absolute;
             top: -8px;
-            left: -33px;
+            left: -17px;
             width: 3px;
             height: 40px;
             background-color: #41F6D7;
@@ -34,18 +34,7 @@
         }
     }
 
-    &__politics {
-        @include font(14px, 16px, 0.2, $textm);
-    }
-
-    &__politics--color-text {
-        color: $bgColorOrderBtn;
-    }
-
-    &__politics-link {
-        @include font(14px, 16px, 0.2, $bgColorOrderBtn);
-        text-decoration: none;
-    }
+    @import "../politics/politics";
 
     &__send-feedback {
         align-self: flex-end;
@@ -86,6 +75,10 @@
 
         &__title {
             margin-top: 0px;
+
+            &::before {
+                left: -33px;
+            }
         }
 
         &__send-feedback {
