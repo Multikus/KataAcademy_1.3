@@ -22,7 +22,9 @@
 }
 
 @media (min-width: 371px) {
+
     .repair {
+        
         &__slider-pagination {
             display: none;
         }
@@ -30,7 +32,9 @@
 }
 
 @media (min-width: 768px) {
+
     .repair {
+        max-width: 1120px;
 
         &__slider {
             padding-bottom: 0;
@@ -68,6 +72,7 @@
 }
 
 @media (min-width: 1120px) {
+
     .repair {
 
         &__logo-item {

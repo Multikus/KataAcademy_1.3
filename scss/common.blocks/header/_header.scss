@@ -1,8 +1,4 @@
-.button-default {
-    border: none;
-    background: none;
-    display: block;
-}
+@import "../button-default/button-default";
 
 .header {
     background-color: $header;
@@ -55,7 +51,9 @@
 }
 
 @media (min-width: 768px) {
-    .header {    
+
+    .header {
+
         &__menu {
             display: flex;
             justify-content: space-between;
@@ -129,6 +127,7 @@
 }
 
 @media (min-width: 1120px) {
+    
     .header {
         display: none;
     }
