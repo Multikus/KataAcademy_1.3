@@ -1,56 +1,114 @@
+.repair-tech {
+    box-sizing: border-box;
 
+    &__swiper-container {
+        position: relative;
+        overflow-x: hidden;
+        padding-bottom: 30px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        width: 240px;
+        height: 160px;
+        background-color: $repCard;
+        border: 1px solid $borderLogoPartners;
+        border-radius: 6px;
+        padding: 16px;
+    }
+
+    &__title-card {
+        @include font(16px, 24px, -0.2px, $title)
+    }
+
+    &__slider-pagination,
+    .swiper-pagination {
+        position: absolute;
+    }
+
+    &__link {
+        text-decoration: none;
+        align-self: flex-end;
+    }
+
+    &__read-more {
+        margin-top: 24px;
+        margin-bottom: 33px;
+        display: none;
+    }
+}
+
+@media (min-width: 371px) {
+
+    .repair-tech {
+
+        &__slider-pagination {
+            display: none;
+        }
+    }
+}
 
 @media (min-width: 768px) {
+
     .repair-tech {
         padding-left: 24px;
         padding-right: 24px;
 
-		&__title {
-		}
+        &__swiper-container {
+            overflow-x: visible;
+        }
 
-		&__cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-		}
+        &__cards {
+            padding: 0;
+        }
 
-		&__item {
-            display: flex;
-            justify-content: space-between;
+        &__item {
             width: 224px;
-            height: 160px;
-            background-color: $repCard;
-            border: 1px solid $borderLogoPartners;
-            border-radius: 6px;
             margin-top: 24px;
-            padding: 16px;
-		}
 
-		&__title-card {
-            @include font(16px, 24px, -0.2px, $title)
-		}
+            &--tablet-visible-hide {
+                display: none;
+            }
 
-		&__link {
-            text-decoration: none;
-            align-self: flex-end;
-		}
+            &--visible-hide {
+                display: none;
+            }
+        }
 
-		&__read-more {
+        &__read-more {
             margin-top: 24px;
             margin-bottom: 33px;
-		}
+            display: flex;
+        }
     }
 }
 
 @media (min-width: 1120px) {
+
     .repair-tech {
-        
+        max-width: 1120px;
+
         &__item {
             width: 240px;
+
+            &--tablet-visible-hide {
+                display: flex;
+            }
         }
 
         &__read-more {
             margin-bottom: 50px;
-		}
+        }
+
+        &__title {
+            padding-left: 0;
+        }
     }
 }

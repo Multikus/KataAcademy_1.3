@@ -80,6 +80,7 @@ body {
   border: none;
   background: none;
   display: block;
+  cursor: pointer;
 }
 
 .header {
@@ -675,6 +676,13 @@ body {
     padding: 10px;
   }
   .container--location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 52px;
     padding-right: 0;
     max-height: 160px;
@@ -795,6 +803,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .repair {
+    max-width: 1120px;
+  }
   .repair__slider {
     padding-bottom: 0;
   }
@@ -841,60 +852,120 @@ body {
   }
 }
 
+.repair-tech {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.repair-tech__swiper-container {
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+}
+
+.repair-tech__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+}
+
+.repair-tech__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 240px;
+  height: 160px;
+  background-color: #ffffff;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.repair-tech__title-card {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+}
+
+.repair-tech__slider-pagination,
+.repair-tech .swiper-pagination {
+  position: absolute;
+}
+
+.repair-tech__link {
+  text-decoration: none;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.repair-tech__read-more {
+  margin-top: 24px;
+  margin-bottom: 33px;
+  display: none;
+}
+
+@media (min-width: 371px) {
+  .repair-tech__slider-pagination {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .repair-tech {
     padding-left: 24px;
     padding-right: 24px;
   }
+  .repair-tech__swiper-container {
+    overflow-x: visible;
+  }
   .repair-tech__cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    padding: 0;
   }
   .repair-tech__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     width: 224px;
-    height: 160px;
-    background-color: #ffffff;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px;
     margin-top: 24px;
-    padding: 16px;
   }
-  .repair-tech__title-card {
-    font-family: 'TT Lakes';
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
+  .repair-tech__item--tablet-visible-hide {
+    display: none;
   }
-  .repair-tech__link {
-    text-decoration: none;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+  .repair-tech__item--visible-hide {
+    display: none;
   }
   .repair-tech__read-more {
     margin-top: 24px;
     margin-bottom: 33px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 @media (min-width: 1120px) {
+  .repair-tech {
+    max-width: 1120px;
+  }
   .repair-tech__item {
     width: 240px;
   }
+  .repair-tech__item--tablet-visible-hide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .repair-tech__read-more {
     margin-bottom: 50px;
+  }
+  .repair-tech__title {
+    padding-left: 0;
   }
 }
 
@@ -916,6 +987,22 @@ body {
   margin-top: 16px;
 }
 
+.price__swiper-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 38px;
+}
+
+.price__slider-pagination {
+  position: absolute;
+  text-align: center;
+}
+
 .price__service-lists {
   min-width: 260px;
   height: 200px;
@@ -927,7 +1014,6 @@ body {
   border-radius: 6px;
   background-color: #ffffff;
   padding: 16px;
-  margin-right: 16px;
 }
 
 .price__service-title--mobile-visible-hide {
@@ -942,15 +1028,42 @@ body {
 .price__service-item {
   color: #1B1C21;
   display: block;
+  font-size: 18px;
 }
 
-.price__service-item--order-fourth-elem {
-  margin-left: 65px;
+.price__service-item--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__title-repair-services {
+  font-size: 16px;
+  color: #7E7E82;
+  margin-bottom: 7px;
+}
+
+.price__title-price {
+  font-size: 16px;
+  color: #7E7E82;
+  margin-top: 8px;
+}
+
+.price__title-term {
+  font-size: 16px;
+  color: #7E7E82;
+  margin-top: 16px;
+  white-space: nowrap;
 }
 
 .price__descripition-box {
-  width: 455px;
-  margin-top: 32px;
+  width: 288px;
   padding-left: 32px;
 }
 
@@ -972,11 +1085,24 @@ body {
   color: #1B1C21;
   font-weight: 500;
   padding: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  width: 190px;
+  text-align: start;
 }
 
 .price__offer-img-arrow {
   fill: #FF3E79;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+@media (min-width: 371px) {
+  .price__slider-pagination {
+    display: none;
+  }
 }
 
 @media (min-width: 400px) {
@@ -1010,8 +1136,8 @@ body {
     height: auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 3fr (1fr)[3];
-        grid-template-columns: 3fr repeat(3, 1fr);
+    -ms-grid-columns: 5fr 2fr 3fr 0fr;
+        grid-template-columns: 5fr 2fr 3fr 0fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     grid-column-gap: 0px;
@@ -1023,14 +1149,20 @@ body {
     color: #1B1C21;
     border-bottom: 1px solid #EAEAEA;
     background-color: #ffffff;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .price__lists-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .price__service-title {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 6fr 2fr 3fr 1fr;
-        grid-template-columns: 6fr 2fr 3fr 1fr;
+    -ms-grid-columns: 5fr 2fr 3fr 0fr;
+        grid-template-columns: 5fr 2fr 3fr 0fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     grid-column-gap: 0px;
@@ -1043,9 +1175,25 @@ body {
   .price__service-item {
     padding-top: 23px;
     padding-bottom: 23px;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .price__service-item--box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .price__service-item--order-fourth-elem {
-    margin-left: 65px;
+    margin-left: 0px;
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  .price__item-time {
+    white-space: nowrap;
   }
   .price__descripition-box {
     width: 455px;
@@ -1070,9 +1218,26 @@ body {
     font-weight: 500;
     padding: 0;
     margin-bottom: 50px;
+    width: auto;
   }
   .price__offer-img-arrow {
     fill: #FF3E79;
+  }
+}
+
+@media (min-width: 1120px) {
+  .price {
+    max-width: 1120px;
+  }
+  .price__service-lists {
+    -ms-grid-columns: 6fr 2fr 3fr 0fr;
+        grid-template-columns: 6fr 2fr 3fr 0fr;
+  }
+  .price__service-item {
+    white-space: nowrap;
+  }
+  .price--order-fourth-elem {
+    margin-left: 59px;
   }
 }
 
@@ -1135,7 +1300,7 @@ body {
 
 @media (min-width: 1120px) {
   .section-name__title {
-    padding-left: 32px;
+    padding-left: 16px;
   }
 }
 
@@ -1159,14 +1324,25 @@ body {
   display: block;
   text-align: center;
   margin: 0 auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .footer__copy {
   margin-top: 18px;
+  padding-top: 8px;
 }
 
 .footer__text-info {
-  margin-bottom: 19px;
+  padding-bottom: 19px;
+}
+
+.footer__text-copy {
+  padding-top: 0;
+}
+
+.footer__year-copy {
+  padding-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -1232,6 +1408,9 @@ body {
   }
   .footer__info {
     width: 330px;
+  }
+  .footer__copy {
+    padding-top: 0;
   }
 }
 

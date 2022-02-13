@@ -1,5 +1,6 @@
 .price {
     overflow-x: hidden;
+
     &__table-box {
         display: flex;
         flex-wrap: nowrap;
@@ -10,6 +11,19 @@
         margin-top: 16px;
     }
 
+    &__swiper-container {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        overflow-x: hidden;
+        padding-bottom: 38px;
+    }
+
+    &__slider-pagination {
+        position: absolute;
+        text-align: center;
+    }
+
     &__service-lists {
         min-width: 260px;
         height: 200px;
@@ -17,18 +31,12 @@
         border-radius: 6px;
         background-color: $bgColorPriceBox;
         padding: 16px;
-
-// удалить после запуска слайдера
-        margin-right: 16px;
     }
 
     &__service-title {
+
         &--mobile-visible-hide {
             display: none;
-        }
-
-        &--only-mobile-visible {
-
         }
     }
 
@@ -40,15 +48,36 @@
     &__service-item {
         color: $title;
         display: block;
-        &--order-fourth-elem {
-            margin-left: 65px;
+        font-size: 18px;
+
+        &--box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
+    &__title-repair-services {
+        font-size: 16px;
+        color: $textm;
+        margin-bottom: 7px;
+    }
+
+    &__title-price {
+        font-size: 16px;
+        color: $textm;
+        margin-top: 8px;
+    }
+
+    &__title-term {
+        font-size: 16px;
+        color: $textm;
+        margin-top: 16px;
+        white-space: nowrap;
+    }
 
     &__descripition-box {
-        width: 455px;
-        margin-top: 32px;
+        width: 288px;
         padding-left: 32px;
     }
 
@@ -62,7 +91,9 @@
         @include font(16px, 24px, -0.2px, $title);
         font-weight: 500;
         padding: 0;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        width: 190px;
+        text-align: start;
     }
 
     &__offer-img-arrow {
@@ -70,9 +101,15 @@
     }
 }
 
+@import "../../common.blocks/swiper-pagination-bullet/_swiper-pagination-bullet.scss";
 
-
-
+@media (min-width: 371px) {
+    .price {
+        &__slider-pagination {
+            display: none;
+        }
+    }
+}
 
 @media (min-width: 400px) {
     .price {
@@ -123,7 +160,7 @@
             min-width: auto;
             height: auto;
             display: grid;
-            grid-template-columns: 3fr repeat(3, 1fr);
+            grid-template-columns: 5fr 2fr 3fr 0fr;
             grid-template-rows: 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
@@ -131,18 +168,22 @@
             @include font(14px, 18px, 0.2px, $title);
             border-bottom: 1px solid $borderLogoPartners;
             background-color: $bgColorPriceBox;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        &__lists-wrapper {
+            flex-direction: column;
         }
     
         &__service-title {
             display: grid;
-            grid-template-columns: 6fr 2fr 3fr 1fr;
+            grid-template-columns: 5fr 2fr 3fr 0fr;
             grid-template-rows: 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
         }
-    //посмотреть
+
         &__service-title {
             background-color: $mbg;
             color: $textm;
@@ -151,12 +192,24 @@
         &__service-item {
             padding-top: 23px;
             padding-bottom: 23px;
+            white-space: nowrap;
+            font-size: 14px;
+
+            &--box {
+                display: flex;
+                justify-content: space-between;
+            }
     
             &--order-fourth-elem {
-                margin-left: 65px;
+                margin-left: 0px;
+                grid-column-start: 4;
+                grid-column-end: 5;
             }
         }
-    
+
+        &__item-time {
+            white-space: nowrap;
+        }
     
         &__descripition-box {
             width: 455px;
@@ -175,10 +228,32 @@
             font-weight: 500;
             padding: 0;
             margin-bottom: 50px;
+            width: auto;
         }
     
         &__offer-img-arrow {
             fill: $bgColorOrderBtn;
         }
+    }
+}
+
+
+@media (min-width: 1120px) {
+
+    .price {
+        max-width: 1120px;
+
+        &__service-lists {
+            grid-template-columns: 6fr 2fr 3fr 0fr;
+        }
+
+        &__service-item {
+            white-space: nowrap;
+        }
+    
+        &--order-fourth-elem {
+            margin-left: 59px;
+        }
+        
     }
 }
