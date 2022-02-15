@@ -15,11 +15,29 @@
     .partner-logo {
         width: 224px;
         height: 72px;
+
+        &__logo-item {
+
+            &--tablet-hide {
+                display: none;
+            }
+
+            &--show {
+                display: flex;
+            }
+        }
     }
 }
 
 @media (min-width: 1120px) {
     .partner-logo {
         width: 240px;
+
+        &__logo-item {
+
+            &--desktop-show {
+                display: flex;
+            }
+        }
     }
 }

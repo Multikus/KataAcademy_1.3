@@ -1,14 +1,33 @@
+.feedback-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500vw;
+    height: 300vh;
+    z-index: 98;
+    background-color: $header;
+    opacity: 0.9;
+
+    &--visually-toggle {
+        display: none;
+    }
+}
+
 .feedback {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     max-width: 320px;
-    height: 100vh;
+    height: 200vh;
     padding-left: 16px;
     padding-right: 16px;
     background-color: $bgPopup;
     box-shadow: 5px 0px 6px -7px rgba(65, 246, 215, 1) inset;
     margin: 0 auto;
+    display: none;
+    z-index: 999;
 
     &__close-popup {
         position: absolute;

@@ -67,6 +67,7 @@
 
         &__cards {
             padding: 0;
+            flex-wrap: wrap;
         }
 
         &__item {
@@ -79,6 +80,10 @@
 
             &--visible-hide {
                 display: none;
+            }
+
+            &--visible-true {
+                display: flex;
             }
         }
 

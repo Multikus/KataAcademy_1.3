@@ -2,15 +2,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 200vh;
+    width: 500vw;
+    height: 300vh;
     z-index: 98;
     background-color: $header;
     opacity: 0.9;
-}
 
-.overlay--visually-toggle {
-    display: none;
+    &--visually-toggle {
+        display: none;
+    }
 }
 
 .mobile-menu--visually-toggle {
@@ -23,6 +23,7 @@
     top: 0;
     left: 0;
     width: 320px;
+    height: 200vh;
     z-index: 99;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 
