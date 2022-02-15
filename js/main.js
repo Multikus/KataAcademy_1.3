@@ -1,4 +1,6 @@
 const overlay = document.querySelector('.overlay');
+const overlayBackCall = document.querySelector('.back-call-overlay');
+const overlayFeedback = document.querySelector('.feedback-overlay');
 const mobileMenu = document.querySelector('.mobile-menu');
 const headerBurgerBtn = document.querySelector('.header__burger-btn');
 const mobileMenuBtnClose = document.querySelector('.mobile-menu__btn-close');
@@ -8,28 +10,23 @@ const repairReadMoreBtn = document.querySelector('.repair__read-more');
 const slider = document.querySelector('.repair__slider');
 const sliderPrice = document.querySelector('.price__swiper-container');
 const sliderTech = document.querySelector('.repair-tech__swiper-container');
-const repairTechItem = document.querySelectorAll('.hide-js');
+const repairTechItem = document.querySelectorAll('.repair-tech__item--visible-hide');
+const partnerLogoItem = document.querySelectorAll('.partner-logo__logo-item--tablet-hide');
 const repairTechReadMoreBtn = document.querySelector('.repair-tech__read-more');
+const headerPhoneButton = document.querySelector('.header__phone-button');
+const backCallPopup = document.querySelector('.back-call');
+const feedbackPopup = document.querySelector('.feedback');
+const formOrderButton = document.querySelector('.form-order__button');
+const closePopupBackCallBtn = document.querySelector('.back-call__close-popup');
+const closePopupFeedbackBtn = document.querySelector('.feedback__close-popup');
+const checkStatusButton = document.querySelector('.header__check-status-button');
+const descriptionOrderButton = document.querySelector('.menu-desktop__form-order');
+const checkStatusButtonDesktop = document.querySelector('.menu-desktop__check-status');
+const getOfferButton = document.querySelector('.price__get-offer-btn');
+
 let mySwiper;
 let mySwiperPrice;
 let mySwiperTech;
-
-const showAll = function(arr) {
-    let heightAllElem = 0;
-    let heightElement = 0;
-    let widthElement = arr[0].offsetWidth;
-    let blocWidth = overflow.offsetWidth;
-    let elementInRow = Math.floor(blocWidth / widthElement);
-    let needShowRow = Math.ceil(arr.length / elementInRow) - 2;
-
-    for(let i = 0; i < arr.length; i++) {
-        heightAllElem =  heightAllElem + (arr[i].offsetHeight + 16)
-    }
-
-    heightElement = Math.floor(heightAllElem / arr.length);
-
-    return needShowRow * heightElement
-}
 
 const openCloseMenu = function() {
     overlay.classList.toggle('overlay--visually-toggle');
@@ -37,28 +34,41 @@ const openCloseMenu = function() {
     mobileMenuBtnClose.classList.toggle('mobile-menu--visually-toggle');
 }
 
+const openCloseBackCallPopup = function () {
+    overlayBackCall.classList.toggle('back-call-overlay--visually-toggle');
+    backCallPopup.classList.toggle('back-call--show');
+}
+
+const openCloseFeedbackPopup = function () {
+    overlayFeedback.classList.toggle('feedback-overlay--visually-toggle');
+    feedbackPopup.classList.toggle('feedback--show');
+}
+
+// const openCloseFeedbackPopupDesktop = function () {
+//     overlayFeedback.classList.toggle('feedback-overlay--visually-toggle');
+//     feedbackPopup.classList.toggle('feedback--show');
+// }
+
 headerBurgerBtn.addEventListener('click', openCloseMenu);
 mobileMenuBtnClose.addEventListener('click', openCloseMenu);
 overlay.addEventListener('click', openCloseMenu);
 
-repairReadMoreBtn.addEventListener('click', () => {
-    if(!overflow.classList.contains('repair__logo-list--overflow')) {
-        overflow.classList.add('repair__logo-list--overflow');
-        overflow.style.height = (overflow.offsetHeight + showAll(repairLogoItem)) + 'px';
-        repairReadMoreBtn.innerHTML = `
-            <img style='transform: rotate(180deg)' class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
-            Скрыть
-        `;
+headerPhoneButton.addEventListener('click', openCloseBackCallPopup);
+closePopupBackCallBtn.addEventListener('click', openCloseBackCallPopup);
+overlayBackCall.addEventListener('click', openCloseBackCallPopup);
 
-    } else {
-        overflow.style.height = '190px';
-        overflow.style.overflowY = 'hidden';
-        overflow.classList.remove('repair__logo-list--overflow');
-        repairReadMoreBtn.innerHTML = `
-            <img class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
-            Показать всё
-        `;
-    }
+checkStatusButton.addEventListener('click', openCloseFeedbackPopup);
+formOrderButton.addEventListener('click', openCloseFeedbackPopup);
+closePopupFeedbackBtn.addEventListener('click', openCloseFeedbackPopup);
+overlayFeedback.addEventListener('click', openCloseFeedbackPopup);
+descriptionOrderButton.addEventListener('click', openCloseFeedbackPopup);
+checkStatusButtonDesktop.addEventListener('click', openCloseFeedbackPopup);
+getOfferButton.addEventListener('click', () => {
+    openCloseFeedbackPopup();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
 
 // swiper
@@ -154,20 +164,36 @@ window.addEventListener('resize', () => {
 });
 
 //скрываем элементы
-const showHideRepairTechCard = function(list, setDataName) {
+const showHideCard = function(list, checkClass, checkVisibleClass, btn, btnClassShow) {
+    for ( let i = 0; i <= list.length - 1; i++ ) {
 
-    for ( let i = 0; i <= list.length; i++ ) {
-        if( list[i].dataset.setDataName == 'false' && 
-            list[i].classList.contains('hide-js') ) {
-            list[i].style.display = 'flex';
-            list[i].dataset.setDataName = 'true';
+        if( list[i].classList.contains(checkClass) &&
+            list[i].classList.contains(checkVisibleClass) ) {
+            list[i].classList.remove(checkVisibleClass)
         } else {
-            list[i].style.display = 'none';
-            list[i].dataset.setDataName = 'false';
+            list[i].classList.add(checkVisibleClass)
         }
+    }
+
+    if ( btn.classList.contains(btnClassShow) ) {
+        btn.innerHTML = `
+        <img style='transform: rotate(180deg)' class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
+        Скрыть
+        `;
+        btn.classList.remove(btnClassShow);
+    } else {
+        btn.innerHTML = `
+        <img class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
+        Показать всё
+        `;
+        btn.classList.add(btnClassShow);
     }
 }
 
 repairTechReadMoreBtn.addEventListener('click', () => {
-    showHideRepairTechCard(repairTechItem, 'visible');
+    showHideCard(repairTechItem, 'repair-tech__item--visible-hide', 'repair-tech__item--visible-true', repairTechReadMoreBtn, 'repair-tech__read-more--show-all');
+});
+
+repairReadMoreBtn.addEventListener('click', () => {
+    showHideCard(partnerLogoItem, 'partner-logo__logo-item--tablet-hide', 'partner-logo__logo-item--show', repairReadMoreBtn, 'repair__read-more--show-all')
 });

@@ -1,8 +1,27 @@
+.back-call-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500vw;
+    height: 300vh;
+    z-index: 98;
+    background-color: $header;
+    opacity: 0.9;
+
+    &--visually-toggle {
+        display: none;
+    }
+}
+
 .back-call {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
 
     &__send-btn {
         align-self: flex-end;
         margin-top: 19px;
     }
-
 }

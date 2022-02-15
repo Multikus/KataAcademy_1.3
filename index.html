@@ -28,7 +28,7 @@
                         alt="Картинка с логотипом компании">
                 </li>
                 <li class="header__phone">
-                    <button class=" button-default">
+                    <button class=" button-default header__phone-button">
                         <img class="header__phone-icon" src="./img/svg/call.svg" width="40" height="40"
                             alt="Кнопка заказа обратного звонка">
                     </button>
@@ -46,13 +46,13 @@
                     </button>
                 </li>
                 <li class="form-order header__form-order">
-                    <button class="button-default">
+                    <button class="button-default form-order__button">
                         <img class="header__form-icon" src="./img/svg/repair.svg" width="40" height="40"
                             alt="Форма заявки">
                     </button>
                 </li>
                 <li class="header__check-status">
-                    <button class="button-default">
+                    <button class="button-default header__check-status-button">
                         <img class="header__check-icon" src="./img/svg/checkstatus.svg" width="40" height="40"
                             alt="Проверить статус заявки">
                     </button>
@@ -226,7 +226,7 @@
 
                 <div class="swiper-container repair__slider" data-mobile="false">
                     <ul class="swiper-wrapper repair__logo-list">
-                        <li class="swiper-slide partner-logo repair__logo-item ">
+                        <li class="partner-logo repair__logo-item swiper-slide">
                             <img class="partner__logo-img" src="./img/svg/Partners/lenovo.svg" alt="логотип компании">
                             <a class="partner__link" href="#">
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
@@ -262,32 +262,38 @@
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                             </a>
                         </li>
-                        <li class="partner-logo repair__logo-item swiper-slide">
+                        <li class="partner-logo repair__logo-item partner-logo__logo-item--tablet-hide partner-logo__logo-item--desktop-show swiper-slide">
                             <img class="partner__logo-img" src="./img/svg/Partners/acer.svg" alt="логотип компании">
                             <a class="partner__link" href="#">
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                             </a>
                         </li>
-                        <li class="partner-logo repair__logo-item swiper-slide">
+                        <li class="partner-logo repair__logo-item partner-logo__logo-item--tablet-hide partner-logo__logo-item--desktop-show swiper-slide">
                             <img class="partner__logo-img" src="./img/svg/Partners/sony.svg" alt="логотип компании">
                             <a class="partner__link" href="#">
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                             </a>
                         </li>
-                        <li class="partner-logo repair__logo-item swiper-slide">
+                        <li class="partner-logo repair__logo-item partner-logo__logo-item--tablet-hide swiper-slide">
                             <img class="partner__logo-img" src="./img/svg/Partners/lenovo.svg" alt="логотип компании">
                             <a class="partner__link" href="#">
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                             </a>
                         </li>
-                        <li class="partner-logo repair__logo-item swiper-slide">
+                        <li class="partner-logo repair__logo-item partner-logo__logo-item--tablet-hide swiper-slide">
                             <img class="partner__logo-img" src="./img/svg/Partners/samsung.svg" alt="логотип компании">
                             <a class="partner__link" href="#">
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                             </a>
                         </li>
-                        <li class="partner-logo repair__logo-item swiper-slide">
+                        <li class="partner-logo repair__logo-item partner-logo__logo-item--tablet-hide swiper-slide">
                             <img class="partner__logo-img" src="./img/svg/Partners/apple.svg" alt="логотип компании">
+                            <a class="partner__link" href="#">
+                                <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
+                            </a>
+                        </li>
+                        <li class="partner-logo repair__logo-item partner-logo__logo-item--tablet-hide swiper-slide">
+                            <img class="partner__logo-img" src="./img/svg/Partners/sony.svg" alt="логотип компании">
                             <a class="partner__link" href="#">
                                 <img class="partner__link-icon" src="./img/svg/Partners/arrow-right.svg" alt="перейти на сайт партнёра">
                             </a>
@@ -296,7 +302,7 @@
                     <div class="swiper-pagination repair__slider-pagination"></div>
                 </div>
 
-                <button type="button" class="read-more repair__read-more button-default">
+                <button type="button" class="read-more repair__read-more repair__read-more--show-all button-default">
                     <img class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
                     Показать всё
                 </button>
@@ -332,7 +338,7 @@
                                     <img src="./img/svg/Partners/arrow-right.svg" alt="перейти к описанию услуги" class="repai-tech__img-link">
                                 </a>
                         </li>
-                        <li class="repair-tech__item swiper-slide repair-tech__item--tablet-visible-hide">
+                        <li class="repair-tech__item swiper-slide repair-tech__item--visible-hide repair-tech__item--tablet-visible-hide">
                             <span class="repair-tech__title-card">
                                 Ремонт мониторов
                             </span>
@@ -384,7 +390,7 @@
                     </ul>
                     <div class="swiper-pagination repair-tech__slider-pagination"></div>
                 </div>
-                <button type="button" class="read-more repair-tech__read-more button-default">
+                <button type="button" class="read-more repair-tech__read-more repair-tech__read-more--show-all button-default">
                     <img class="read-more__arrow" src="./img/svg/arrow-down.svg" alt="Стрелка вниз. Открывает текст">
                     Показать всё
                 </button>
@@ -524,7 +530,8 @@
 
     <!-- popups -->
     <!-- обратная связь -->
-    <div class="feedback hide-js">
+    <div class="feedback-overlay feedback-overlay--visually-toggle"></div>
+    <div class="feedback">
         <button class="feedback__close-popup button-default">
             <img class="feedback__btn-close-img" src="./img/svg/closeBtn.svg" alt="Кнопка закрытия формы обратной связи" >
         </button>
@@ -545,8 +552,9 @@
         <button class="feedback__send-feedback button-default button-order">Отправить</button>
     </div>
 <!-- заказть звонок -->
-    <div class="back-call feedback hide-js">
-        <button class="feedback__close-popup button-default">
+    <div class="back-call-overlay back-call-overlay--visually-toggle"></div>
+    <div class="back-call feedback">
+        <button class="feedback__close-popup back-call__close-popup button-default">
             <img class="feedback__btn-close-img" src="./img/svg/closeBtn.svg" alt="Кнопка закрытия формы обратной связи" >
         </button>
         <h1 class="feedback__title title">Заказать звонок</h1>
